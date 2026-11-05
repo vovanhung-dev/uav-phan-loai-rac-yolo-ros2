@@ -40,3 +40,5 @@ make_*report*.py
 !TomTat_PhuongPhap_ThucNghiem_KetQua.pdf
 .env
 *.log
+!tai-lieu/cai-dat/Huong-dan-cai-dat-va-chay-UAV-Phan-Loai-Rac.docx
+!tai-lieu/cai-dat/Huong-dan-cai-dat-va-chay-UAV-Phan-Loai-Rac.pdf

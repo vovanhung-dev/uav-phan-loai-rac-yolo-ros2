@@ -1,0 +1,1513 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="waste_field">
+    <physics name="4ms" type="ignored">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <scene>
+      <ambient>0.75 0.75 0.75 1</ambient>
+      <background>0.62 0.78 0.92 1</background>
+      <shadows>true</shadows>
+      <grid>false</grid>
+    </scene>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 20 0 0 0</pose>
+      <diffuse>0.95 0.93 0.88 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.35 0.2 -0.9</direction>
+    </light>
+
+    <include>
+      <uri>model://waste_field_ground</uri>
+    </include>
+
+    <include>
+      <name>x3_uav</name>
+      <uri>model://x3_uav</uri>
+      <pose>-7.0 0.0 0.06 0 0 0</pose>
+    </include>
+
+    <model name="bottle_00">
+      <static>true</static>
+      <pose>-3.686 2.087 0.004 0 0 -1.784</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.125 0.278</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_00.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_01">
+      <static>true</static>
+      <pose>3.219 3.386 0.004 0 0 0.173</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.344 0.254</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_01.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_02">
+      <static>true</static>
+      <pose>3.172 -5.345 0.004 0 0 -2.231</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.117 0.097</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_02.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_03">
+      <static>true</static>
+      <pose>2.765 4.636 0.004 0 0 3.113</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.244 0.075</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_03.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_04">
+      <static>true</static>
+      <pose>2.978 -1.026 0.004 0 0 -1.075</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.079 0.243</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_04.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_05">
+      <static>true</static>
+      <pose>-0.027 -4.226 0.004 0 0 1.514</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.323 0.253</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_05.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_06">
+      <static>true</static>
+      <pose>-4.527 3.395 0.004 0 0 0.327</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.118 0.1</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_06.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_07">
+      <static>true</static>
+      <pose>-1.728 -0.168 0.004 0 0 -0.189</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.267 0.185</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_07.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_08">
+      <static>true</static>
+      <pose>3.522 -4.679 0.004 0 0 2.945</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.078 0.257</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_08.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_09">
+      <static>true</static>
+      <pose>4.334 2.803 0.004 0 0 -2.696</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.339 0.449</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_09.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_10">
+      <static>true</static>
+      <pose>0.661 0.648 0.004 0 0 2.659</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.108 0.069</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_10.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_11">
+      <static>true</static>
+      <pose>4.263 -0.994 0.004 0 0 0.009</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.295 0.205</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_11.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_12">
+      <static>true</static>
+      <pose>-2.577 3.675 0.004 0 0 3.097</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.297 0.236</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_12.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_13">
+      <static>true</static>
+      <pose>-0.044 -0.093 0.004 0 0 0.139</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.398 0.337</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_13.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_14">
+      <static>true</static>
+      <pose>0.787 -1.995 0.004 0 0 1.066</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.105 0.053</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_14.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_15">
+      <static>true</static>
+      <pose>1.391 3.67 0.004 0 0 0.611</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.235 0.191</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_15.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_16">
+      <static>true</static>
+      <pose>-2.127 -4.364 0.004 0 0 -2.048</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.255 0.314</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_16.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_17">
+      <static>true</static>
+      <pose>-0.784 -3.741 0.004 0 0 2.505</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.304 0.408</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_17.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_18">
+      <static>true</static>
+      <pose>5.041 -1.023 0.004 0 0 0.569</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.136 0.138</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_18.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_19">
+      <static>true</static>
+      <pose>4.215 -0.1 0.004 0 0 2.741</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.246 0.267</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_19.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_20">
+      <static>true</static>
+      <pose>-2.795 0.68 0.004 0 0 1.721</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.099 0.304</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_20.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_21">
+      <static>true</static>
+      <pose>-0.185 3.707 0.004 0 0 0.995</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.431 0.325</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_21.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_22">
+      <static>true</static>
+      <pose>-5.118 -2.765 0.004 0 0 -1.017</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.103 0.049</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_22.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_23">
+      <static>true</static>
+      <pose>4.391 5.318 0.004 0 0 -2.265</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.205 0.139</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_23.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_24">
+      <static>true</static>
+      <pose>1.653 4.526 0.004 0 0 -1.809</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.21 0.242</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_24.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_25">
+      <static>true</static>
+      <pose>3.721 3.247 0.004 0 0 -0.464</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.398 0.312</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_25.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_26">
+      <static>true</static>
+      <pose>0.893 3.843 0.004 0 0 0.556</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.086 0.106</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_26.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_27">
+      <static>true</static>
+      <pose>-1.294 -4.115 0.004 0 0 -1.092</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.226 0.105</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_27.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_28">
+      <static>true</static>
+      <pose>-2.753 5.012 0.004 0 0 -0.593</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.117 0.261</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_28.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_29">
+      <static>true</static>
+      <pose>5.046 4.462 0.004 0 0 -0.647</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.332 0.338</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_29.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_30">
+      <static>true</static>
+      <pose>-3.447 1.559 0.004 0 0 -2.393</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.103 0.088</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_30.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_31">
+      <static>true</static>
+      <pose>-2.405 -2.156 0.004 0 0 2.438</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.24 0.097</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_31.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_32">
+      <static>true</static>
+      <pose>1.333 -3.503 0.004 0 0 1.534</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.126 0.256</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_32.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_33">
+      <static>true</static>
+      <pose>2.828 1.143 0.004 0 0 1.723</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.434 0.32</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_33.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_34">
+      <static>true</static>
+      <pose>-0.397 -4.802 0.004 0 0 1.329</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.078 0.107</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_34.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_35">
+      <static>true</static>
+      <pose>-2.718 2.164 0.004 0 0 -1.604</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.275 0.111</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_35.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_36">
+      <static>true</static>
+      <pose>5.395 3.494 0.004 0 0 0.459</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.279 0.218</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_36.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_37">
+      <static>true</static>
+      <pose>0.5 -4.839 0.004 0 0 2.935</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.415 0.339</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_37.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_38">
+      <static>true</static>
+      <pose>-2.088 2.194 0.004 0 0 -1.951</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.13 0.082</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_38.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_39">
+      <static>true</static>
+      <pose>1.281 -1.917 0.004 0 0 -1.143</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.186 0.236</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_39.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_40">
+      <static>true</static>
+      <pose>5.425 -4.316 0.004 0 0 0.795</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.237 0.292</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_40.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_41">
+      <static>true</static>
+      <pose>3.384 5.252 0.004 0 0 -3.017</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.401 0.296</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_41.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_42">
+      <static>true</static>
+      <pose>1.591 -0.631 0.004 0 0 2.36</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.121 0.076</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_42.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_43">
+      <static>true</static>
+      <pose>-4.726 -5.226 0.004 0 0 -1.41</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.204 0.152</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_43.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_44">
+      <static>true</static>
+      <pose>0.983 -1.05 0.004 0 0 -1.656</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.107 0.276</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_44.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_45">
+      <static>true</static>
+      <pose>1.45 5.094 0.004 0 0 -2.056</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.325 0.219</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_45.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_46">
+      <static>true</static>
+      <pose>-1.397 1.151 0.004 0 0 0.797</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.129 0.131</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_46.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_47">
+      <static>true</static>
+      <pose>2.844 1.848 0.004 0 0 1.15</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.27 0.173</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_47.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_48">
+      <static>true</static>
+      <pose>5.381 -5.43 0.004 0 0 2.36</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.111 0.256</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_48.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_49">
+      <static>true</static>
+      <pose>2.381 -4.502 0.004 0 0 -1.24</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.293 0.33</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_49.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_50">
+      <static>true</static>
+      <pose>4.879 2.666 0.004 0 0 3.084</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.139 0.074</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_50.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_51">
+      <static>true</static>
+      <pose>-3.669 -0.734 0.004 0 0 0.513</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.237 0.193</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_51.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_52">
+      <static>true</static>
+      <pose>-3.423 -4.598 0.004 0 0 -1.544</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.113 0.266</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_52.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_53">
+      <static>true</static>
+      <pose>3.799 -3.813 0.004 0 0 0.616</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.346 0.255</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_53.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_54">
+      <static>true</static>
+      <pose>-2.448 -1.331 0.004 0 0 -0.397</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.119 0.057</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_54.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_55">
+      <static>true</static>
+      <pose>-3.582 -1.269 0.004 0 0 2.986</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.135 0.21</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_55.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_56">
+      <static>true</static>
+      <pose>-3.133 -1.643 0.004 0 0 0.008</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.196 0.242</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_56.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_57">
+      <static>true</static>
+      <pose>-5.068 1.186 0.004 0 0 -3.094</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.351 0.302</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_57.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_58">
+      <static>true</static>
+      <pose>-2.101 -0.505 0.004 0 0 -2.294</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.115 0.088</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_58.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_59">
+      <static>true</static>
+      <pose>0.571 -3.024 0.004 0 0 2.41</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.125 0.293</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_59.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="bottle_60">
+      <static>true</static>
+      <pose>-4.615 4.396 0.004 0 0 -0.017</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.076 0.252</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/bottle_60.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="plastic_bag_61">
+      <static>true</static>
+      <pose>-0.095 1.971 0.004 0 0 -2.177</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.284 0.34</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/plastic_bag_61.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="battery_62">
+      <static>true</static>
+      <pose>-2.332 1.54 0.004 0 0 -2.695</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.136 0.104</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/battery_62.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="organic_waste_63">
+      <static>true</static>
+      <pose>-4.756 0.129 0.004 0 0 -0.928</pose>
+      <link name="link">
+        <visual name="visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane><normal>0 0 1</normal><size>0.186 0.236</size></plane>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://waste_items/materials/textures/organic_waste_63.png</albedo_map>
+                <roughness>0.7</roughness>
+                <metalness>0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

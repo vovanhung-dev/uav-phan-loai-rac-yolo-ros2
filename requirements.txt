@@ -1,0 +1,14 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0
+torchvision==0.21.0
+numpy<2
+ultralytics==8.4.174
+opencv-python==4.10.0.84
+pandas
+pyarrow<18
+huggingface_hub
+rembg==2.0.69
+onnxruntime-gpu
+requests
+matplotlib
+coverage>=7.6

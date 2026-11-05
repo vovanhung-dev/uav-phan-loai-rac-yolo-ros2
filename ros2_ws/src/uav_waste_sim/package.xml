@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>uav_waste_sim</name>
+  <version>1.0.0</version>
+  <description>Mô phỏng UAV gắn camera trong Gazebo, truyền ảnh qua ROS 2 và nhận diện 4 loại rác bằng YOLO</description>
+  <maintainer email="vohung77h@gmail.com">vovanhung-dev</maintainer>
+  <license>MIT</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>vision_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

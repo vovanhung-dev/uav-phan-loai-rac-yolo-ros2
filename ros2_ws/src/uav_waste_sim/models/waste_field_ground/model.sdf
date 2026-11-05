@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="waste_field_ground">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane><normal>0 0 1</normal><size>40.0 40.0</size></plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh><uri>model://waste_field_ground/meshes/ground.obj</uri></mesh>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://waste_field_ground/materials/textures/ground.jpg</albedo_map>
+              <roughness>0.95</roughness>
+              <metalness>0</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
